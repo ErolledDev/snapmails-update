@@ -50,6 +50,10 @@ export default function FAQ() {
       answer: "Each temporary email address is session-based and device-specific. While you can't synchronize the same address across devices, you can easily generate new temporary addresses on each device. This approach maintains security and ensures a clean separation between different sessions."
     },
     {
+  "question": "Can I use my personalized email address permanently?",
+  "answer": "No. You can choose your favorite name for your temporary email address, but it is not permanent. Email messages are temporary and are not saved between sessions."
+},
+    {
       question: "What should I do if I don't receive an expected email?",
       answer: "If you're not receiving expected emails: 1) Check if the sender has the correct email address, 2) Verify that the email wasn't automatically filtered, 3) Use the refresh button to manually check for new messages, 4) Consider using a different domain if certain senders are blocked, 5) Contact our support if problems persist."
     }

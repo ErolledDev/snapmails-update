@@ -323,12 +323,11 @@ const EmailBox = () => {
     }
   };
 
-  // Initialize email and setup auto-refresh
   useEffect(() => {
     const initializeEmail = async () => {
       try {
         if (isNewEmailRef.current) {
-          return; // Skip initialization if we just generated a new email
+          return;
         }
 
         const savedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
@@ -365,7 +364,6 @@ const EmailBox = () => {
 
     initializeEmail();
 
-    // Setup auto-refresh
     const refreshInterval = setInterval(() => {
       checkEmails(false);
     }, REFRESH_INTERVAL);
@@ -375,7 +373,6 @@ const EmailBox = () => {
     };
   }, [client, checkEmails]);
 
-  // Load saved state
   useEffect(() => {
     const savedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
     const savedEmails = localStorage.getItem(EMAILS_STORAGE_KEY);
@@ -414,7 +411,6 @@ const EmailBox = () => {
     }
   }, []);
 
-  // Save state
   useEffect(() => {
     if (emailAddress && emailTimestamp) {
       localStorage.setItem(EMAIL_STORAGE_KEY, emailAddress);
@@ -437,7 +433,7 @@ const EmailBox = () => {
 
   if (initialLoading) {
     return (
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden animate-pulse">
+      <div className="bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden animate-pulse">
         <div className="p-4 border-b border-gray-200 dark:border-gray-700">
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/4 mb-4"></div>
           <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div>
@@ -451,7 +447,7 @@ const EmailBox = () => {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+    <div className="bg-white/80 dark:bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden">
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between mb-2">
           <div className="text-sm font-medium text-gray-600 dark:text-gray-300">Your temporary email address:</div>
@@ -472,7 +468,7 @@ const EmailBox = () => {
                 title="Copy email address"
                 aria-label="Copy email address to clipboard"
               >
-                <Copy className="w-4 h-4 dark:text-gray-300 " aria-hidden="true" />
+                <Copy className="w-4 h-4 dark:text-gray-300" aria-hidden="true" />
               </button>
               {showCopied && (
                 <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded shadow-lg animate-fade-in-out">
@@ -584,7 +580,7 @@ const EmailBox = () => {
           )}
         </div>
 
-        <div className="overflow-y-auto bg-white dark:bg-gray-800">
+        <div className="overflow-y-auto bg-white/50 dark:bg-gray-800/30">
           {selectedEmail ? (
             <div className="p-4">
               <div className="mb-4">
