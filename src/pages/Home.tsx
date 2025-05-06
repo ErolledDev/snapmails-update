@@ -64,25 +64,32 @@ const Home: React.FC = () => {
       </div>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Top ad unit */}
-        <AdUnit 
-          slot="1234567890"
-          format="auto"
-          className="mb-8"
-        />
+        {/* Top ad unit with content before */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Instant Email Protection</h2>
+          <p className="text-lg text-gray-700 dark:text-gray-200 mb-4">
+            Get started with our secure temporary email service in seconds. No registration required.
+          </p>
+          <AdUnit 
+            slot="1234567890"
+            format="auto"
+            position="top"
+            className="mt-4"
+          />
+        </section>
 
         <ErrorBoundary>
           <EmailBox />
         </ErrorBoundary>
 
-        {/* Bottom ad unit */}
+        {/* Bottom ad unit with content after */}
         <AdUnit 
           slot="0987654321"
           format="auto"
-          className="mt-8"
+          position="bottom"
+          className="mb-8"
         />
 
-        {/* Additional content sections */}
         <section className="mt-16">
           <h2 className="text-3xl font-bold mb-8 text-center">Why Choose SnapMails?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
