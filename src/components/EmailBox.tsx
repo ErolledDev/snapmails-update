@@ -433,7 +433,7 @@ const EmailBox = () => {
 
   if (initialLoading) {
     return (
-      <div className="bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden animate-pulse">
+      <div className="bg-white dark:bg-gray-800 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden animate-pulse">
         <div className="p-4 border-b border-gray-200 dark:border-gray-700">
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/4 mb-4"></div>
           <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div>
@@ -447,7 +447,7 @@ const EmailBox = () => {
   }
 
   return (
-    <div className="bg-white/80 dark:bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden">
+    <div className="bg-white dark:bg-gray-800 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden">
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between mb-2">
           <div className="text-sm font-medium text-gray-600 dark:text-gray-300">Your temporary email address:</div>
