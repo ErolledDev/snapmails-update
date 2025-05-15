@@ -447,7 +447,7 @@ const EmailBox = () => {
   }
 
   return (
-    <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden">
+    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-800">
       <div className="p-4 border-b border-gray-200 dark:border-gray-800">
         <div className="flex items-center justify-between mb-2">
           <div className="text-sm font-medium text-gray-600 dark:text-gray-300">Your temporary email address:</div>
@@ -580,7 +580,7 @@ const EmailBox = () => {
           )}
         </div>
 
-        <div className="overflow-y-auto bg-white/50 dark:bg-gray-900/30">
+        <div className="overflow-y-auto bg-gray-50 dark:bg-gray-800">
           {selectedEmail ? (
             <div className="p-4">
               <div className="mb-4">
