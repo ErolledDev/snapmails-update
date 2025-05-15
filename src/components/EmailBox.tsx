@@ -447,8 +447,8 @@ const EmailBox = () => {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden">
-      <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+    <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden">
+      <div className="p-4 border-b border-gray-200 dark:border-gray-800">
         <div className="flex items-center justify-between mb-2">
           <div className="text-sm font-medium text-gray-600 dark:text-gray-300">Your temporary email address:</div>
           <div className="flex gap-2 items-center">
@@ -551,7 +551,7 @@ const EmailBox = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 h-[600px]">
-        <div className="border-r border-gray-200 dark:border-gray-700 overflow-y-auto">
+        <div className="border-r border-gray-200 dark:border-gray-800 overflow-y-auto">
           {isRefreshing ? (
             <div className="flex items-center justify-center h-full">
               <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
@@ -580,7 +580,7 @@ const EmailBox = () => {
           )}
         </div>
 
-        <div className="overflow-y-auto bg-white/50 dark:bg-gray-800/30">
+        <div className="overflow-y-auto bg-white/50 dark:bg-gray-900/30">
           {selectedEmail ? (
             <div className="p-4">
               <div className="mb-4">
